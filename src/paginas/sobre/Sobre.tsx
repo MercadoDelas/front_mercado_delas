@@ -11,7 +11,7 @@ export default function Sobre() {
           <div className="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
             <div className="md:5/12 lg:w-5/12">
               <img
-                src="https://tailus.io/sources/blocks/left-image/preview/images/startup.png"
+                src="https://storage.googleapis.com/atados-v3/user-uploaded/images/8010b1b6-32bc-4dd4-bc11-a4a607c9974c.png"
                 alt="image"
                 loading="lazy"
                 width=""
@@ -20,7 +20,7 @@ export default function Sobre() {
             </div>
             <div className="md:7/12 lg:w-6/12">
               <h2 className="text-2xl text-gray-900 font-bold md:text-4xl">
-                Nuxt development is carried out by passionate developers
+                Sobre Nós.
               </h2>
               <p className="mt-6 text-gray-600">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum
