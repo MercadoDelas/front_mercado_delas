@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./paginas/home/Home";
 import Contato from "./paginas/contato/Contato";
 import Sobre from "./paginas/sobre/Sobre";
+import Teste from "./paginas/teste/Teste";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/contato" element={<Contato />} />
             <Route path="/sobre" element={<Sobre />} />
+            <Route path="/teste" element={<Teste />} />
           </Routes>
         </div>
       </BrowserRouter>
