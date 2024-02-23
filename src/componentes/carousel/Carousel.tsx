@@ -1,14 +1,13 @@
 // Importando os Componentes Swiper React
 
 import { Swiper, SwiperSlide } from "swiper/react";
-// Importando Modulos do Carrossel
 import { Navigation, Pagination } from "swiper/modules";
 
 // Importando os estilos Swiper
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import bannerCarrousel from "../../assets/img/bannerCarrousel.png";
+import bannerCarrousel from "../../assets/img/editadoTeste.png";
 
 // Importando SEU CSS
 import "./carousel.css";
