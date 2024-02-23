@@ -139,9 +139,7 @@ function Login() {
                 <span>
                   Copyright © 2024
                   <a
-                    href="https://codepen.io/uidesignhub"
-                    rel=""
-                    target="_blank"
+                    href="/login"
                     title="Ajimon"
                     className="text-green hover:text-violet-500 "
                   >
