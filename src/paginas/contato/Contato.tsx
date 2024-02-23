@@ -1,10 +1,7 @@
-import Footer from "../../componentes/footter/Footer";
-import Navbar from "../../componentes/navbar/Navbar";
 
 export default function Contato() {
   return (
     <div>
-      <Navbar />
       <section className="text-gray-600 body-font relative">
         <div
           className="absolute inset-0 bg-gray-300"
@@ -57,7 +54,6 @@ export default function Contato() {
           </div>
         </div>
       </section>
-      <Footer />
     </div>
   );
 }
