@@ -1,4 +1,4 @@
-import Footer from "../../componentes/footter/Footer";
+import Footer from "../../componentes/footer/Footer";
 import Navbar from "../../componentes/navbar/Navbar";
 
 export default function Sobre() {

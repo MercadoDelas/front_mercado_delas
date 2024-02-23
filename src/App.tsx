@@ -6,12 +6,14 @@ import Sobre from "./paginas/sobre/Sobre";
 import Teste from "./paginas/teste/Teste";
 import Login from "./paginas/login/Login";
 import Navbar from "./componentes/navbar/Navbar";
-import Footer from "./componentes/footter/Footer";
+import Footer from "./componentes/footer/Footer";
 import Cadastro from "./paginas/cadastro/Cadastro";
+import { AuthProvider } from './contexts/AuthContext';
 
 function App() {
   return (
     <>
+    <AuthProvider>
       <BrowserRouter>
       <Navbar/>
         <div className="min-h-[80vh]">
@@ -27,6 +29,7 @@ function App() {
         </div>
         <Footer/>
       </BrowserRouter>
+      </AuthProvider>
     </>
   );
 }
