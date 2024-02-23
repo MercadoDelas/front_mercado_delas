@@ -1,4 +1,4 @@
-import Card from "../../componentes/card/Card";
+
 import Carousel from "../../componentes/carousel/Carousel";
 import Footer from "../../componentes/footter/Footer";
 import Navbar from "../../componentes/navbar/Navbar";
@@ -9,7 +9,6 @@ export default function Home() {
       <Navbar />
       <Carousel />
       {/* <h1>Home</h1> */}
-      <Card/>
       <Footer />
     </div>
   );
