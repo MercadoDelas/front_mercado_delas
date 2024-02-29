@@ -19,7 +19,7 @@ export default function Contato() {
           ></iframe>
         </div>
         <div className="container px-5 py-24 mx-auto flex">
-          <div className="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
+          <div className="lg:w-1/3 md:w-1/2 bg-white rounded-2xl p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
             <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
               Fale conosco!
             </h2>
@@ -48,7 +48,7 @@ export default function Contato() {
                 className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
               ></textarea>
             </div>
-            <button className="text-white bg-violet-500 border-0 py-2 px-6 focus:outline-none hover:bg-violet-700 rounded text-lg">
+            <button className="text-white bg-violet-500 border-0 py-2 px-6 focus:outline-none hover:bg-violet-700 rounded-full text-lg">
               Enviar
             </button>
           </div>

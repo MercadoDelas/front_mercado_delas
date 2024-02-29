@@ -7,14 +7,15 @@ export default function Teste() {
             <div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
                 <div className="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
                     <div className="md:5/12 lg:w-5/12">
-                    <img src="https://github.com/MercadoDelas/front_mercado_delas/blob/main/src/assets/img/Group%201.png?raw=true" alt="image" width="" height=""/>
+                    <img src="https://img.freepik.com/vetores-gratis/ilustracao-do-conceito-de-promocao-de-vendas_114360-17611.jpg?t=st=1708712354~exp=1708715954~hmac=9f7cad2e2f2140b18e3a4921214d455cdd121d0142893baf152937d941f66c71&w=740" alt="image" width="" height=""/>
                     </div>
                     <div className="md:7/12 lg:w-6/12">
                     <h2 className="text-2xl text-gray-900 font-bold md:text-4xl">Conheça um pouco mais sobre a gente</h2>
-                    <h3 className="text-xl">Ps. não mordemos</h3>
-                    <p className="mt-6 text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis voluptatem accusantium nemo perspiciatis delectus atque autem! Voluptatum tenetur beatae unde aperiam, repellat expedita consequatur! Officiis id consequatur atque doloremque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis voluptatem accusantium nemo perspiciatis delectus atque autem! Voluptatum tenetur beatae unde aperiam, repellat expedita consequatur! Officiis id consequatur atque doloremque!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis voluptatem accusantium nemo perspiciatis delectus atque autem! Voluptatum tenetur beatae unde aperiam, repellat expedita consequatur! Officiis id consequatur atque doloremque!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis voluptatem accusantium nemo perspiciatis delectus atque autem! Voluptatum tenetur beatae unde aperiam, repellat expedita consequatur! Officiis id consequatur atque doloremque!</p>
-                    <p className="mt-4 text-gray-600"> Nobis minus voluptatibus pariatur dignissimos libero quaerat iure expedita at? Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia.</p>
+                    <h3 className="text-xl">Empoderando mulheres, celebrando talentos: Somos o Mercado Delas</h3>
+                    <p className="mt-6 text-gray-600">Bem-vindo ao Mercado Delas! Produtos cuidadosamente selecionados, criados com talento e paixão por mulheres empreendedoras de todo o mundo. Aqui, celebramos a força, a criatividade e a excelência feminina em cada item que oferecemos.</p>
+                    <p className="mt-4 text-gray-600"> No Mercado Delas, estamos comprometidos em proporcionar uma plataforma que não apenas valoriza os produtos feitos por mulheres, mas também apoia e promove suas habilidades e negócios. Cada item em nosso catálogo é uma história de determinação, inovação e inspiração.</p>
+                    <p className="mt-4 text-gray-600">Ao escolher o Mercado Delas, você  se torna parte de uma comunidade que valoriza a diversidade, a igualdade e o empoderamento feminino. Cada compra feita em nosso site não só apoia as mulheres empreendedoras, mas também contribui para o crescimento e o fortalecimento da economia feminina.</p>
+                    <p className="mt-4 text-gray-600"> Explore o Mercado Delas e descubra o poder do talento feminino em cada produto. Junte-se a nós enquanto celebramos a diversidade, a criatividade e o impacto duradouro das mulheres empreendedoras em todo o mundo. Obrigado por fazer parte desta jornada conosco.</p>
                     </div>
                 </div>
             </div>

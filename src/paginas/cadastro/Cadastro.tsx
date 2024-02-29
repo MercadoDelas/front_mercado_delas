@@ -82,12 +82,13 @@ function Cadastro() {
             <div className="self-start hidden lg:flex flex-col  text-white">
               <img src="" className="mb-3" />
               <h1 className="mb-3 font-bold text-5xl">
-                Hi ? Welcome Back Aji{" "}
+                Oi! Bem-Vinde ao Mercado Delas{" "}
               </h1>
               <p className="pr-3">
-                Lorem ipsum is placeholder text commonly used in the graphic,
-                print, and publishing industries for previewing layouts and
-                visual mockups
+              Empoderando mulheres, impulsinando sonhos:
+              </p>
+              <p className="pr-3">
+              Seu mercado, sua liberdade
               </p>
             </div>
           </div>

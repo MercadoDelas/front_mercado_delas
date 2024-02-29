@@ -7,7 +7,8 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import bannerCarrousel from "../../assets/img/editadoTeste.png";
+import bannerCarrousel1 from "../../assets/img/Bem-Vinde ao Mercado Delas (2).png";
+import bannerCarrousel2 from "../../assets/img/Bem-Vinde ao Mercado Delas (3).png";
 
 // Importando SEU CSS
 import "./carousel.css";
@@ -15,10 +16,10 @@ import "./carousel.css";
 function Carousel() {
   const items = [
     {
-      img: "https://www.riotgames.com/darkroom/1440/b540da2b9afe5ec83e842a2d84f6dbb1:e95535ecd35e48592908762c9353926a/arcane-final-poster-16x9-no-text-no-border.jpg",
+      img: bannerCarrousel1,
     },
     {
-      img: bannerCarrousel,
+      img: bannerCarrousel2,
     },
   ];
 
