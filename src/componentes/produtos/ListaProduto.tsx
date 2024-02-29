@@ -39,6 +39,7 @@ function ListaProdutos() {
   }
 
   useEffect(() => {
+    console.log(produtos, "teste123")
     buscarProdutos();
   }, [produtos.length]);
   return (

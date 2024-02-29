@@ -207,7 +207,7 @@ function FormularioProduto() {
         <div className="flex flex-col gap-2">
           <p>Categoria do produto</p>
           <select name="categoria" id="categoria" className='border p-2 border-slate-800 rounded' onChange={(e) => buscarCategoriaPorId(e.currentTarget.value)}>
-            <option value="" selected disabled>Selecione um tema</option>
+            <option value="" selected disabled>Selecione uma categoria</option>
             {categorias.map((categoria) => (
               <>
                 <option value={categoria.id} >{categoria.tipo}</option>

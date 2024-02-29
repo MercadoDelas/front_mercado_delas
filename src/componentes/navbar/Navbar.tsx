@@ -1,25 +1,55 @@
-import { Basket, FunnelSimple, GenderFemale, House, PaperPlaneRight, User } from "@phosphor-icons/react";
-import { Link } from "react-router-dom";
+import { Basket, FunnelSimple, GenderFemale,PaperPlaneRight, User } from "@phosphor-icons/react";
+import { Link, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../contexts/AuthContext";
+import { toastAlerta } from "../../utils/toastAlerta";
 
 function Navbar(){
-    return(
-        <>
+    let navigate = useNavigate()
+
+    const { usuario, handleLogout } = useContext(AuthContext)
+
+    function logout() {
+        handleLogout()
+        toastAlerta('Usuário deslogado com sucesso', 'sucesso')
+        navigate('/login')
+    }
+
+    let navbarComponent
+
+    if(usuario.token !== "") {
+      navbarComponent = (
+
             <div className="w-full bg-violet-500 text-white flex justify-center py-4">
                 <div className="container flex justify-between text-lg">
-                    <div className="text-2xl font-bold uppercasse"><img  className="h-12" src="https://github.com/IgorCavalcantiMoura/Procenge-Sistema-Escola/blob/main/Mercado-delas_igor.gif?raw=true" alt="" /></div>
-                    
-
+                    <div className="text-2xl font-bold uppercasse">  
+                        <Link to="/home">
+                       <img  className="h-12" src="https://github.com/IgorCavalcantiMoura/Procenge-Sistema-Escola/blob/main/Mercado-delas_igor.gif?raw=true" alt="" />
+                    </Link>
+                    </div>
                         <div className="flex gap-5">
-                            <Link to='/home' className="hover:scale-110 flex items-center gap-1"><House size={16} />Home</Link>
-                            <div className="hover:scale-110 flex items-center gap-1"><Basket size={16} />Produtos</div>
+                            <Link to="/produtos" className="hover:scale-110 flex items-center gap-1"><Basket size={16} />Produtos</Link>
+                            <Link to="/cadastroProduto" className="hover:scale-110 flex items-center gap-1"><Basket size={16} />Novo Produto</Link>
+                            <Link to='/cadastroCategoria' className="hover:scale-110 flex items-center gap-1"><FunnelSimple size={16} /> Nova Categoria</Link>
                             <Link to='/categorias' className="hover:scale-110 flex items-center gap-1"><FunnelSimple size={16} /> Categorias</Link>
                             <Link to='/teste' className="hover:scale-110 flex items-center gap-1"> <GenderFemale size={16} />Sobre Nós</Link>
                             <Link to='/contato' className="hover:scale-110 flex items-center gap-1"> <PaperPlaneRight size={16} />Contato</Link>
-                            <Link to='/login' className="hover:scale-110 flex items-center gap-1"> <User size={16} />Login</Link>
+                            <Link to='' onClick={logout} className="hover:scale-110 flex items-center gap-1"> <User size={16} />Sair</Link>
                         </div>
                 </div>
             </div>
-        </>
-    )
+       )
+    }
+
+  return (
+    <>
+      {navbarComponent}
+    </>
+  )
 }
-export default Navbar;
+
+export default Navbar
+
+function toastAlert(arg0: string) {
+  throw new Error('Function not implemented.')
+}
