@@ -9,6 +9,8 @@ import Navbar from "./componentes/navbar/Navbar";
 import Footer from "./componentes/footer/Footer";
 import Cadastro from "./paginas/cadastro/Cadastro";
 import { AuthProvider } from "./contexts/AuthContext";
+import CardCategoria from "./componentes/categorias/CardCategoria";
+import ListaCategoria from "./componentes/categorias/ListaCategoria";
 
 function App() {
   return (
@@ -26,6 +28,10 @@ function App() {
               <Route path="/sobre" element={<Sobre />} />
               <Route path="/teste" element={<Teste />} />
               <Route path="/cadastro" element={<Cadastro />} />
+              <Route path="/cardCategoria" element={<CardCategoria />} />
+              <Route path="/listaCategoria" element={<ListaCategoria />} />
+
+
             </Routes>
           </div>
           <Footer />
