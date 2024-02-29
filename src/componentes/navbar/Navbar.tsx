@@ -12,7 +12,7 @@ function Navbar(){
                         <div className="flex gap-5">
                             <Link to='/home' className="hover:scale-110 flex items-center gap-1"><House size={16} />Home</Link>
                             <div className="hover:scale-110 flex items-center gap-1"><Basket size={16} />Produtos</div>
-                            <div className="hover:scale-110 flex items-center gap-1"><FunnelSimple size={16} />Categorias</div>
+                            <Link to='/categorias' className="hover:scale-110 flex items-center gap-1"><FunnelSimple size={16} /> Categorias</Link>
                             <Link to='/teste' className="hover:scale-110 flex items-center gap-1"> <GenderFemale size={16} />Sobre Nós</Link>
                             <Link to='/contato' className="hover:scale-110 flex items-center gap-1"> <PaperPlaneRight size={16} />Contato</Link>
                             <Link to='/login' className="hover:scale-110 flex items-center gap-1"> <User size={16} />Login</Link>

@@ -9,8 +9,9 @@ import Navbar from "./componentes/navbar/Navbar";
 import Footer from "./componentes/footer/Footer";
 import Cadastro from "./paginas/cadastro/Cadastro";
 import { AuthProvider } from "./contexts/AuthContext";
-import CardCategoria from "./componentes/categorias/CardCategoria";
 import ListaCategoria from "./componentes/categorias/ListaCategoria";
+import FormularioCategoria from "./componentes/categorias/FormularioCategoria";
+import DeletarCategoria from "./componentes/categorias/DeletarCategoria";
 
 function App() {
   return (
@@ -28,8 +29,11 @@ function App() {
               <Route path="/sobre" element={<Sobre />} />
               <Route path="/teste" element={<Teste />} />
               <Route path="/cadastro" element={<Cadastro />} />
-              <Route path="/cardCategoria" element={<CardCategoria />} />
+              <Route path="/categorias" element={<ListaCategoria />} />
               <Route path="/listaCategoria" element={<ListaCategoria />} />
+              <Route path="/cadastroCategoria" element={<FormularioCategoria />} />
+              <Route path="/editarCategoria/:id" element={<FormularioCategoria />} />
+              <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
 
 
             </Routes>
