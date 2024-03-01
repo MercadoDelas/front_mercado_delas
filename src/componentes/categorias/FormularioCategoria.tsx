@@ -98,33 +98,33 @@ function FormularioCategoria() {
 
     return (
         <div className="container flex flex-col items-center justify-center mx-auto">
-            <h1 className="text-4xl text-center my-8">
+            <h1 className="text-gray-900 text-lg mb-1 my-12 font-medium title-font">
                 {id === undefined ? 'Cadastre uma nova categoria' : 'Editar categoria'}
             </h1>
 
             <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovaCategoria}>
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="nome">Nome da categoria</label>
-                    <input
+                    <label htmlFor="nome" className="leading-7 text-sm text-gray-600">Nome da categoria</label>
+                    <input 
                         type="text"
                         placeholder="nome"
                         name='tipo'
-                        className="border-2 border-slate-700 rounded p-2"
+                        className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                         value={categoria.tipo}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                     />
-                    <label htmlFor="descricao">Descrição da categoria</label>
+                    <label htmlFor="descricao" className="leading-7 text-sm text-gray-600">Descrição da categoria</label>
                     <input
                         type="text"
                         placeholder="descrição"
                         name='descricao'
-                        className="border-2 border-slate-700 rounded p-2"
+                        className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                         value={categoria.descricao}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                     />
                 </div>
                 <button
-                    className="rounded text-slate-100 bg-indigo-400 hover:bg-indigo-800 w-1/2 py-2 mx-auto block"
+                    className="rounded-full text-slate-100 bg-violet-300 hover:bg-violet-500 w-1/2 py-2 mx-auto block"
                     type="submit"
                 >
                     {id === undefined ? 'Cadastrar' : 'Editar'}

@@ -1,4 +1,4 @@
-import { Basket, FunnelSimple, GenderFemale,PaperPlaneRight, User } from "@phosphor-icons/react";
+import { Basket, FunnelSimple, GenderFemale,PaperPlaneRight, PlusCircle, SignOut} from "@phosphor-icons/react";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
@@ -20,7 +20,7 @@ function Navbar(){
     if(usuario.token !== "") {
       navbarComponent = (
 
-            <div className="w-full bg-violet-500 text-white flex justify-center py-4">
+            <div className="w-full bg-violet-500 text-white flex justify-center py-2">
                 <div className="container flex justify-between text-lg">
                     <div className="text-2xl font-bold uppercasse">  
                         <Link to="/home">
@@ -29,12 +29,12 @@ function Navbar(){
                     </div>
                         <div className="flex gap-5">
                             <Link to="/produtos" className="hover:scale-110 flex items-center gap-1"><Basket size={16} />Produtos</Link>
-                            <Link to="/cadastroProduto" className="hover:scale-110 flex items-center gap-1"><Basket size={16} />Novo Produto</Link>
-                            <Link to='/cadastroCategoria' className="hover:scale-110 flex items-center gap-1"><FunnelSimple size={16} /> Nova Categoria</Link>
+                            <Link to="/cadastroProduto" className="hover:scale-110 flex items-center gap-1"><PlusCircle size={16} />Novo Produto</Link>
                             <Link to='/categorias' className="hover:scale-110 flex items-center gap-1"><FunnelSimple size={16} /> Categorias</Link>
+                            <Link to='/cadastroCategoria' className="hover:scale-110 flex items-center gap-1"><PlusCircle size={16} /> Nova Categoria</Link>
                             <Link to='/teste' className="hover:scale-110 flex items-center gap-1"> <GenderFemale size={16} />Sobre Nós</Link>
                             <Link to='/contato' className="hover:scale-110 flex items-center gap-1"> <PaperPlaneRight size={16} />Contato</Link>
-                            <Link to='' onClick={logout} className="hover:scale-110 flex items-center gap-1"> <User size={16} />Sair</Link>
+                            <Link to='' onClick={logout} className="hover:scale-110 flex items-center gap-1"> <SignOut size={16} />Sair</Link>
                         </div>
                 </div>
             </div>
