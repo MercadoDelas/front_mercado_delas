@@ -49,7 +49,7 @@ function FormularioCategoria() {
                     }
                 })
 
-                alert('Categoria atualizada com sucesso')
+                toastAlerta('Categoria atualizada com sucesso', 'sucesso')
                 retornar()
 
             } catch (error: any) {
@@ -70,7 +70,7 @@ function FormularioCategoria() {
                     }
                 })
 
-                alert('Categoria cadastrada com sucesso')
+                toastAlerta('Categoria cadastrada com sucesso', 'sucesso')
 
             } catch (error: any) {
                 if (error.toString().includes('403')) {
