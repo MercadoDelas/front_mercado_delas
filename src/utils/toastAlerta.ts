@@ -1,15 +1,16 @@
 import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export function toastAlerta(mensagem: string, tipo: string) {
   switch (tipo) {
     case 'sucesso':
       toast.success(mensagem, {
         position: 'top-right',
-        autoClose: 2000,
+        autoClose: 10000,
         hideProgressBar: false,
         closeOnClick: true,
-        pauseOnHover: false,
-        draggable: false,
+        pauseOnHover: true,
+        draggable: true,
         theme: 'colored',
         progress: undefined,
       });
