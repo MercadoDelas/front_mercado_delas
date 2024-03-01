@@ -17,15 +17,14 @@ function CardCategoria({ categoria }: CardCategoriaProps) {
             {categoria.descricao}
           </p>
           <div className="rounded flex items-end justify-end">
-            {/* <div className="opacity-95 border rounded-lg border-white px-4 mx-2 mr-4w-20"> */}
+          
               <Link
                 to={`/editarCategoria/${categoria.id}`}
                 className="m-auto inset-0 text-sm font-medium leading-normal text-center text-white py-2 opacity-95 border rounded-lg border-white  w-20 mx-2 hover:bg-white hover:text-violet-700"
               >
                 Editar
               </Link>
-            {/* </div> */}
-            {/* <div className="opacity-95 border rounded-lg border-white px-4 w-20 mx-2 mr-4w-20 hover:bg-white hover:text-violet-700"> */}
+           
               <Link
                 to={`/deletarCategoria/${categoria.id}`}
                 className="m-auto inset-0 text-sm font-medium leading-normal text-center text-white py-2 opacity-95 border rounded-lg border-white  w-20 mx-2 hover:bg-white hover:text-violet-700"

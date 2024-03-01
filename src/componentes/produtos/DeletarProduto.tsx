@@ -17,7 +17,7 @@ function DeletarProduto() {
 
   async function buscarPorId(id: string) {
     try {
-      await buscar(`/postagens/${id}`, setProduto, {
+      await buscar(`/produtos/${id}`, setProduto, {
         headers: {
           'Authorization': token
         }
@@ -29,7 +29,7 @@ function DeletarProduto() {
       }
     }
   }
-
+ 
   useEffect(() => {
     if (token === '') {
       toastAlerta('Você precisa estar logado', 'info')
@@ -69,26 +69,35 @@ function DeletarProduto() {
 
       <p className='text-center font-semibold mb-4'>Você tem certeza de que deseja apagar o produto a seguir?</p>
 
-      <div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
-        <header className='py-2 px-6 bg-indigo-600 text-white font-bold text-2xl'>Produto</header>
-        <div className="p-4">
-          <p className='text-xl h-full'>{produto.nome}</p>
-          <p>{produto.descricao}</p>
-        </div>
-        <div className="p-4">
-          <p className='text-xl h-full'>{produto.preco}</p>
-          <p>{produto.quantidade}</p>
-          <div className="p-4">
-          <p className='text-xl h-full'>{produto.foto}</p>
-        </div>
-        </div>
-        <div className="flex">
-          <button className='text-slate-100 bg-red-400 hover:bg-red-600 w-full py-2' onClick={retornar}>Não</button>
-          <button className='w-full text-slate-100 bg-indigo-400 hover:bg-indigo-600 flex items-center justify-center' onClick={deletarProduto}>
-            Sim
-          </button>
-        </div>
-      </div>
+      <div className="relative flex w-96 flex-col rounded-xl bg-violet-200 bg-clip-border text-gray-700 shadow-md flex justify-center mx-auto">
+  <div className="relative mx-4 mt-4 h-96 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
+    <img
+      src={produto.foto}
+      className="h-full w-full object-cover"
+    />
+  </div>
+  <div className="p-6">
+    <div className="mb-2 flex items-center justify-between">
+      <p className="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
+      {produto.nome}
+      </p>
+      <p className="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">R$
+      {produto.preco}
+      </p>
+    </div>
+    <p className="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
+    {produto.descricao}
+    </p>
+  </div>
+  <div className="p-6 pt-0">
+    <button
+      className="block w-full select-none rounded-lg bg-blue-gray-900/10 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-blue-gray-900 transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" onClick={retornar}>Não</button>
+  </div>
+  <div className="p-6 pt-0">
+    <button 
+      className="block w-full select-none rounded-lg bg-blue-gray-900/10 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-blue-gray-900 transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" onClick={deletarProduto}>Sim</button>
+  </div>
+</div>
     </div>
   )
 }

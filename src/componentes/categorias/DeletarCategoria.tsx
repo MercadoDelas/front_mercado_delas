@@ -70,7 +70,7 @@ function DeletarCategoria() {
 
             <p className='text-center font-semibold mb-4'>Você tem certeza de que deseja apagar a categoria a seguir?</p>
 
-            <div className=" h-screen max-w-2xl mx-auto mt-24 space-y-20">
+            {/* <div className=" h-screen max-w-2xl mx-auto mt-24 space-y-20">
                 <div className=" md:w-3/4 mx-auto">
                     <div className="w-96 inline-flex flex-col space-y-2 items-center justify-end flex-1 h-full p-4 bg-violet-500 rounded-xl">
                         <p className="w-full text-2xl font-semibold text-white">{categoria.tipo}</p>
@@ -85,8 +85,37 @@ function DeletarCategoria() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
+
+<div className="mt-10 flex justify-center mx-auto">
+        <div className="w-96 inline-flex flex-col space-y-2 items-center justify-end flex-1 h-full p-4 bg-violet-500 rounded-xl hover:scale-105 hover:bg-violet-700">
+          <p className="w-full text-2xl font-semibold text-white">
+            {categoria.tipo}
+          </p>
+          <p className="w-full pb-8 text-sm tracking-wide leading-tight text-white">
+            {categoria.descricao}
+          </p>
+          <div className="rounded flex items-end justify-end">
+          
+              <button
+                
+                className="m-auto inset-0 text-sm font-medium leading-normal text-center text-white py-2 opacity-95 border rounded-lg border-white  w-20 mx-2 hover:bg-white hover:text-violet-700"
+                onClick={retornar}>
+                Não
+              </button>
+           
+              <button
+                
+                className="m-auto inset-0 text-sm font-medium leading-normal text-center text-white py-2 opacity-95 border rounded-lg border-white  w-20 mx-2 hover:bg-white hover:text-violet-700"
+                onClick={deletarCategoria}>
+                Sim
+              </button>
+            {/* </div> */}
+          </div>
         </div>
+      </div>
+        </div>
+        
     )
 }
 
