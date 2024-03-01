@@ -6,11 +6,11 @@ export function toastAlerta(mensagem: string, tipo: string) {
     case 'sucesso':
       toast.success(mensagem, {
         position: 'top-right',
-        autoClose: 10000,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
+        pauseOnHover: false,
+        draggable: false,
         theme: 'colored',
         progress: undefined,
       });

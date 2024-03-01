@@ -23,7 +23,7 @@ function CardProduto({produto}: CardProdutoProps) {
       <p className="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
       {produto.nome}
       </p>
-      <p className="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
+      <p className="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">R$
       {produto.preco}
       </p>
     </div>

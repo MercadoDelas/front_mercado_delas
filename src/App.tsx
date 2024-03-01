@@ -15,11 +15,13 @@ import DeletarCategoria from "./componentes/categorias/DeletarCategoria";
 import ListaProdutos from "./componentes/produtos/ListaProduto";
 import FormularioProduto from "./componentes/produtos/FormularioProduto";
 import DeletarProduto from "./componentes/produtos/DeletarProduto";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
     <>
       <AuthProvider>
+        <ToastContainer/>
         <BrowserRouter>
           <Navbar />
           <div className="min-h-[80vh]">
