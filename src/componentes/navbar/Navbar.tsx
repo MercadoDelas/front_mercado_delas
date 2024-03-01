@@ -1,51 +1,126 @@
-import { Basket, FunnelSimple, GenderFemale,PaperPlaneRight, PlusCircle, SignOut} from "@phosphor-icons/react";
+import {
+  Basket,
+  FunnelSimple,
+  GenderFemale,
+  PaperPlaneRight,
+  PlusCircle,
+  SignOut,
+} from "@phosphor-icons/react";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 import { toastAlerta } from "../../utils/toastAlerta";
 
-function Navbar(){
-    let navigate = useNavigate()
+function Navbar() {
+  let navigate = useNavigate();
 
-    const { usuario, handleLogout } = useContext(AuthContext)
+  const { usuario, handleLogout } = useContext(AuthContext);
 
-    function logout() {
-        handleLogout()
-        toastAlerta('Usuário deslogado com sucesso', 'sucesso')
-        navigate('/login')
-    }
+  function logout() {
+    handleLogout();
+    toastAlerta("Usuário deslogado com sucesso", "sucesso");
+    navigate("/login");
+  }
 
-    let navbarComponent
+  let navbarComponent;
 
-    if(usuario.token !== "") {
-      navbarComponent = (
+  if (usuario.token !== "") {
+    navbarComponent = (
+      <div className="w-full bg-violet-500 text-white flex justify-center py-2">
+        <div className="container flex justify-between text-lg">
+          <div className="text-2xl font-bold uppercasse">
+            <Link to="/home">
+              <img
+                className="h-12"
+                src="https://github.com/IgorCavalcantiMoura/Procenge-Sistema-Escola/blob/main/Mercado-delas_igor.gif?raw=true"
+                alt=""
+              />
+            </Link>
+          </div>
+          <div className="flex gap-5">
+            <Link
+              to="/produtos"
+              className="hover:scale-110 flex items-center gap-1"
+            >
+              <Basket size={16} />
+              Produtos
+            </Link>
+            <Link
+              to="/cadastroProduto"
+              className="hover:scale-110 flex items-center gap-1"
+            >
+              <PlusCircle size={16} />
+              Novo Produto
+            </Link>
+            <Link
+              to="/categorias"
+              className="hover:scale-110 flex items-center gap-1"
+            >
+              <FunnelSimple size={16} /> Categorias
+            </Link>
+            <Link
+              to="/cadastroCategoria"
+              className="hover:scale-110 flex items-center gap-1"
+            >
+              <PlusCircle size={16} /> Nova Categoria
+            </Link>
+            <Link
+              to="/teste"
+              className="hover:scale-110 flex items-center gap-1"
+            >
+              {" "}
+              <GenderFemale size={16} />
+              Sobre Nós
+            </Link>
+            <Link
+              to="/contato"
+              className="hover:scale-110 flex items-center gap-1"
+            >
+              {" "}
+              <PaperPlaneRight size={16} />
+              Contato
+            </Link>
+            <Link
+              to=""
+              onClick={logout}
+              className="hover:scale-110 flex items-center gap-1"
+            >
+              {" "}
+              <SignOut size={16} />
+              Sair
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  } else {
+    // Se o usuário não estiver autenticado, mostrar apenas o link de login
+    navbarComponent = (
+      <div className="w-full bg-violet-500 text-white flex justify-center py-2">
+        <div className="container flex justify-between text-lg">
+          <div className="text-2xl font-bold uppercasse">
+            <Link to="/home">
+              <img
+                className="h-12"
+                src="https://github.com/IgorCavalcantiMoura/Procenge-Sistema-Escola/blob/main/Mercado-delas_igor.gif?raw=true"
+                alt=""
+              />
+            </Link>
+          </div>
+          <div className="flex gap-5">
+            <Link
+              to="/login"
+              className="hover:scale-110 flex items-center gap-1"
+            >
+              Login
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
-            <div className="w-full bg-violet-500 text-white flex justify-center py-2">
-                <div className="container flex justify-between text-lg">
-                    <div className="text-2xl font-bold uppercasse">  
-                        <Link to="/home">
-                       <img  className="h-12" src="https://github.com/IgorCavalcantiMoura/Procenge-Sistema-Escola/blob/main/Mercado-delas_igor.gif?raw=true" alt="" />
-                    </Link>
-                    </div>
-                        <div className="flex gap-5">
-                            <Link to="/produtos" className="hover:scale-110 flex items-center gap-1"><Basket size={16} />Produtos</Link>
-                            <Link to="/cadastroProduto" className="hover:scale-110 flex items-center gap-1"><PlusCircle size={16} />Novo Produto</Link>
-                            <Link to='/categorias' className="hover:scale-110 flex items-center gap-1"><FunnelSimple size={16} /> Categorias</Link>
-                            <Link to='/cadastroCategoria' className="hover:scale-110 flex items-center gap-1"><PlusCircle size={16} /> Nova Categoria</Link>
-                            <Link to='/teste' className="hover:scale-110 flex items-center gap-1"> <GenderFemale size={16} />Sobre Nós</Link>
-                            <Link to='/contato' className="hover:scale-110 flex items-center gap-1"> <PaperPlaneRight size={16} />Contato</Link>
-                            <Link to='' onClick={logout} className="hover:scale-110 flex items-center gap-1"> <SignOut size={16} />Sair</Link>
-                        </div>
-                </div>
-            </div>
-       )
-    }
-
-  return (
-    <>
-      {navbarComponent}
-    </>
-  )
+  return <>{navbarComponent}</>;
 }
 
-export default Navbar
+export default Navbar;
