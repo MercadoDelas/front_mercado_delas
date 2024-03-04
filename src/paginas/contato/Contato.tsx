@@ -10,9 +10,6 @@ export default function Contato() {
           <iframe
             width="100%"
             height="100%"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
             title="map"
             scrolling="no"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.3751580533863!2d-34.87365837424624!3d-8.063161680571492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18a48ed72541%3A0xf5636ba795e00cd4!2sPraça%20Barão%20do%20Rio%20Branco%20-%20Recife%2C%20PE%2C%2050020-360!5e0!3m2!1spt-BR!2sbr!4v1708446125622!5m2!1spt-BR!2sbr"
@@ -28,7 +25,7 @@ export default function Contato() {
               Por favor, deixe seu feedback aqui.
             </p>
             <div className="relative mb-4">
-              <label for="email" className="leading-7 text-sm text-gray-600">
+              <label htmlFor="email" className="leading-7 text-sm text-gray-600">
                 Email
               </label>
               <input
@@ -39,7 +36,7 @@ export default function Contato() {
               />
             </div>
             <div className="relative mb-4">
-              <label for="message" className="leading-7 text-sm text-gray-600">
+              <label htmlFor="message" className="leading-7 text-sm text-gray-600">
                 Mensagem
               </label>
               <textarea
