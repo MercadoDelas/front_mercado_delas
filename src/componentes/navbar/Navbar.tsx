@@ -4,6 +4,7 @@ import {
   GenderFemale,
   PaperPlaneRight,
   PlusCircle,
+  SignIn,
   SignOut,
 } from "@phosphor-icons/react";
 import { Link, useNavigate } from "react-router-dom";
@@ -65,7 +66,7 @@ function Navbar() {
               <PlusCircle size={16} /> Nova Categoria
             </Link>
             <Link
-              to="/teste"
+              to="/sobre"
               className="hover:scale-110 flex items-center gap-1"
             >
               {" "}
@@ -112,7 +113,7 @@ function Navbar() {
               to="/login"
               className="hover:scale-110 flex items-center gap-1"
             >
-              Login
+              <SignIn size={16} />Login
             </Link>
           </div>
         </div>
