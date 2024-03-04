@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Dna } from "react-loader-spinner";
+import { Dna, TailSpin } from "react-loader-spinner";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 import { buscar } from "../../services/Service";
@@ -41,14 +41,18 @@ function ListaCategoria() {
   return (
     <>
       {categorias.length === 0 && (
-        <Dna
-          visible={true}
-          height="200"
-          width="200"
-          ariaLabel="dna-loading"
-          wrapperStyle={{}}
-          wrapperClass="dna-wrapper mx-auto"
-        />
+        <div style={{ marginLeft: "50%", marginTop: "20%" }}>
+          <TailSpin
+            visible={true}
+            height="80"
+            width="80"
+            color="#8b5cf6"
+            ariaLabel="tail-spin-loading"
+            radius="1"
+            wrapperStyle={{}}
+            wrapperClass=""
+          />
+        </div>
       )}
       <div className="flex justify-center w-full">
         <div className="container ">
