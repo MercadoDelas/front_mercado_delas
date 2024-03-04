@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Dna, TailSpin } from "react-loader-spinner";
+import { TailSpin } from "react-loader-spinner";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 import { buscar } from "../../services/Service";
@@ -10,7 +10,7 @@ import CardCategoria from "./CardCategoria";
 function ListaCategoria() {
   const [categorias, setCategorias] = useState<Categoria[]>([]);
 
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   const { usuario, handleLogout } = useContext(AuthContext);
   const token = usuario.token;
